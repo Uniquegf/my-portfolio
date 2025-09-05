@@ -1,28 +1,30 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import React from "react";
 
-const pulseCircle = {
+// Pulse circle animation variants
+const pulseCircle: Variants = {
   animate: {
     scale: [1.5, 1.3, 1],
     opacity: [1, 0.6, 1],
     transition: {
       duration: 1.5,
       repeat: Infinity,
-      ease: [0.42, 0, 0.58, 1], // cubic-bezier for easeInOut
+      ease: [0.42, 0, 0.58, 1], // cubic-bezier easeInOut
     },
   },
 };
 
-const fadeInText = {
+// Fade-in text animation variants
+const fadeInText: Variants = {
   initial: { opacity: 0, y: 10 },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 1,
-      ease: [0, 0, 0.58, 1], // cubic-bezier for easeOut
+      ease: [0, 0, 0.58, 1], // cubic-bezier easeOut
     },
   },
 };
